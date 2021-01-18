@@ -11,19 +11,21 @@ const codes = [
   "a"
 ];
 
-function init() {
-  // your code here	
-let test_c = [];
+   let index = 0;
+}	    document.body.addEventListener("keydown", function(e) {
+        // function onKeyDownHandler(e) {
+        const key = e.key;
 
-document.body.addEventListener('keydown',function(e)) {
-test_c.push(e.key);
+        if (key === codes[index]) {
+            index++;
+            if (index === codes.length) {
+                alert("Hurray!");
 
-const index = test_c.slice(test_c.length-10,test_c.length);
-
-let test_1 = codes.toString();
-let test_2 = index.toString();
-if (test_1 === test_2) {
-  alert('Hurray');
-}	}
-
-}
+                index = 0;
+            }
+        } else {
+            index = 0;
+        }
+        // }
+    })
+} 

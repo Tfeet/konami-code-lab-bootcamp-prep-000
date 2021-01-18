@@ -16,7 +16,7 @@ function init() {
   document.body.addEventListener('keydown', function(e) {
     var key = e.key
     if (key === codes[index]) {
-      console.log("Key logged:" + key)
+      console.log("Key logged:" + key);
       ++index
       if (index === codes.length) {
         alert("Hurray!!! You found the EasterEgg!")
